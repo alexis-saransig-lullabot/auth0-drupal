@@ -1009,7 +1009,7 @@ class AuthController extends ControllerBase {
       $user_name_claim = 'nickname';
     }
     /** @var \Drupal\user\UserInterface $user */
-    $user = $this->entityTypeManager->getStorage('user')->create();
+    $user = $this->entityTypeManager()->getStorage('user')->create();
 
     $user->setPassword($this->generatePassword(16));
     $user->enforceIsNew();
